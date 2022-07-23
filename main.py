@@ -7,4 +7,6 @@ for questions in question_data:
     question_bank.append(Question(questions["text"], questions["answer"]))
 
 quiz = QuizBrain(question_bank)
-quiz.next_question()
+
+while quiz.still_has_questions():
+    quiz.next_question()
